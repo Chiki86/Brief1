@@ -1,0 +1,179 @@
+.logo{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    transform: translateY(-100px);
+}
+h1{
+    color: green;
+}
+.lien-ac{
+    min-width: 112px;
+    padding: 10px 18px;
+    border-radius: 16px;
+    background: #087713;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.lien-ac:hover,
+.lien-ac:focus-visible{
+    transform: translateY(-2px);
+    background: #075d10;
+}
+.lien-menu{
+    min-width: 112px;
+    padding: 10px 18px;
+    border-radius: 16px;
+    background: #087713;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.lien-menu:hover,
+.lien-menu:focus-visible{
+    transform: translateY(-2px);
+    background: #075d10;
+}
+.plant-detail {
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 8px);
+    flex-direction: column;
+    padding: 8px clamp(20px, 4vw, 48px) 20px;
+    background-image: linear-gradient(rgba(10, 28, 9, .18), rgba(10, 28, 9, .18)), url("../images/camellia-sinensis-l-o-kuntze.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.detail-header {
+    display: flex;
+    min-height: 170px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+.detail-brand {
+    display: flex;
+    width: 220px;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    color: #24e523;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 4vw, 39px);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    text-shadow: 1px 2px 3px #173d19;
+}
+.detail-brand span { transform: rotate(-12deg); }
+.detail-brand img {
+    width: 128px;
+    height: 128px;
+    margin-top: -2px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.detail-nav {
+    display: flex;
+    gap: clamp(22px, 7vw, 80px);
+    align-items: center;
+    padding: 14px clamp(20px, 7vw, 95px) 0 0;
+}
+.detail-nav a, .page-pager a {
+    display: inline-block;
+    min-width: 122px;
+    padding: 11px 18px;
+    border-radius: 17px;
+    background: #087713;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.detail-nav a:hover, .detail-nav a:focus-visible,
+.page-pager a:hover, .page-pager a:focus-visible { background: #075d10; }
+.plant-layout {
+    display: grid;
+    width: min(100%, 1120px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+    margin: 30px auto auto;
+}
+.plant-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+.plant-figure { min-width: 0; margin: 0; color: #fff; text-align: center; }
+.plant-figure > img, .detail-panel {
+    display: flex;
+    width: 100%;
+    height: clamp(145px, 18vw, 220px);
+    align-items: center;
+    justify-content: center;
+}
+.plant-figure > img { object-fit: cover; }
+.plant-figure figcaption {
+    padding: 20px 4px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(14px, 1.6vw, 17px);
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 0 2px 5px #173d19;
+}
+.cycle-panel {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    background: #f7f7f7;
+    color: #6dbd47;
+}
+.cycle-panel strong {
+    width: 100%;
+    padding: 4px;
+    background: #91d65c;
+    color: #fff;
+    font-size: clamp(14px, 1.6vw, 19px);
+    text-transform: uppercase;
+}
+.cycle-panel span { color: #777; font-size: 14px; }
+.gps-panel { background: #d7d7d7; }
+.page-pager {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 12px 0 0;
+}
+.page-pager a { min-width: 122px; font-size: 17px; }
+
+@media (max-width: 680px) {
+    .plant-detail { min-height: 100vh; padding: 10px 16px 18px; }
+    .detail-header { min-height: 125px; }
+    .detail-brand { width: 125px; font-size: 23px; }
+    .detail-brand img { width: 76px; height: 76px; border-width: 3px; }
+    .detail-nav { gap: 8px; padding: 8px 0 0; }
+    .detail-nav a { min-width: 0; padding: 9px 12px; font-size: 14px; }
+    .plant-layout { grid-template-columns: 1fr; gap: 18px; margin: 12px auto 24px; }
+    .plant-figure > img, .detail-panel { height: 220px; }
+    .plant-figure figcaption { padding-top: 8px; }
+    .page-pager a { min-width: 0; padding: 10px 14px; font-size: 14px; }
+}

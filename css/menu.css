@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 4px;
+    background: #173d19;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chiki {
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 8px);
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px clamp(20px, 3.5vw, 54px) 30px;
+    background-image: linear-gradient(rgba(12, 31, 12, .25), rgba(12, 31, 12, .25)), url("../images/camellia-sinensis-l-o-kuntze.jpg");
+    background-position: center;
+    background-size: cover;
+}
+header{
+    display:flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    justify-self: space-around;
+}
+.texte_logo{
+    color: green;
+}
+.msg{
+    color:yellow;
+}
+.logo{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.accueil{
+    display: flex;
+    gap: clamp(18px, 5vw, 70px);
+    align-items: center;
+    padding: 0 clamp(12px, 6vw, 94px) 0 16px;
+    
+}
+.lien-ac{
+    min-width: 112px;
+    padding: 10px 18px;
+    border-radius: 16px;
+    background: #087713;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.lien-ac:hover,
+.lien-ac:focus-visible{
+    transform: translateY(-2px);
+    background: #075d10;
+}
+.lien-menu{
+     min-width: 112px;
+    padding: 10px 18px;
+    border-radius: 16px;
+    background: #087713;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.lien-menu:hover,
+.lien-menu:focus-visible{
+    transform: translateY(-2px);
+    background: #075d10;
+}
+.lien-menu.cu{
+    background: #e5d20c;
+    color: #fff;
+}
+
+.entete {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    min-height: 145px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.nom logo{
+    margin-bottom: -2px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    transform: rotate(-8deg);
+}
+
+.main-nav {
+    display: flex;
+    gap: clamp(18px, 5vw, 70px);
+    align-items: center;
+    padding: 0 clamp(12px, 4vw, 62px) 0 16px;
+}
+
+.nav-lien {
+    min-width: 112px;
+    padding: 10px 18px;
+    border-radius: 16px;
+    background: #087713;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .2s ease, background-color .2s ease;
+}
+
+.nav-lien:hover,
+.nav-lien:focus-visible {
+    transform: translateY(-2px);
+    background: #075d10;
+}
+
+.nav-lien .en cours {
+    background: #e5d20c;
+}
+
+.groupe-plantes {
+    display: grid;
+    width: min(100%, 800px);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 18px 12px;
+    margin: 6px auto 0;
+}
+
+.img-plant {
+    position: relative;
+    display: grid;
+    width: 148px;
+    height: 148px;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    isolation: isolate;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .2);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.img-plant:hover,
+.img-plant:focus-visible {
+    z-index: 1;
+    transform: scale(1.06);
+    box-shadow: 0 9px 24px rgba(0, 0, 0, .4);
+}
+
+.img-plant::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .62), rgba(0, 0, 0, .16));
+    content: "";
+}
+
+.img-plant img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.img-plant:hover img,
+.img-plant:focus-visible img {
+    transform: scale(1.08);
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .85);
+}
+
+.message strong {
+    margin-bottom: 2px;
+    font-size: 19px;
+    line-height: 1.05;
+}
+
+.message span {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.mousses,
+.gym {
+    width: 205px;
+    height: 115px;
+    border-radius: 999px;
+}
+
+.fougère {
+    width: 170px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.graminées {
+    grid-column: 2;
+    width: 185px;
+    height: 148px;
+    margin-top: 16px;
+}
+
+.dicot {
+    grid-column: 3;
+    width: 148px;
+    height: 190px;
+    margin-top: -4px;
+    border-radius: 48% 48% 45% 45%;
+}
+
+@media (max-width: 760px) {
+    .menu-page {
+        min-height: calc(100svh - 8px);
+        padding: 12px 18px 24px;
+    }
+
+    .site-header {
+        min-height: 120px;
+    }
+
+    .brand {
+        width: 110px;
+    }
+
+    .brand-name {
+        font-size: 21px;
+    }
+
+    .brand img {
+        width: 76px;
+        height: 76px;
+        border-width: 3px;
+    }
+
+    .main-nav {
+        gap: 8px;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .nav-link {
+        min-width: 0;
+        padding: 9px 11px;
+        border-radius: 13px;
+        font-size: 13px;
+    }
+
+    .plant-groups {
+        width: min(100%, 560px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 8px;
+    }
+
+    .plant-card,
+    .mosses,
+    .ferns,
+    .conifers,
+    .grasses,
+    .dicots {
+        width: min(100%, 190px);
+        height: 150px;
+        margin: 0;
+        grid-column: auto;
+        border-radius: 50%;
+    }
+
+    .mosses,
+    .conifers {
+        width: min(100%, 210px);
+        height: 130px;
+        border-radius: 999px;
+    }
+
+    .dicots {
+        height: 175px;
+        border-radius: 48% 48% 45% 45%;
+    }
+}
+
+@media (max-width: 420px) {
+    .main-nav {
+        gap: 5px;
+    }
+
+    .nav-link {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .plant-card,
+    .mosses,
+    .ferns,
+    .conifers,
+    .grasses,
+    .dicots {
+        width: min(100%, 160px);
+        height: 140px;
+    }
+
+    .card-copy {
+        padding: 9px;
+    }
+
+    .card-copy strong {
+        font-size: 17px;
+    }
+
+    .card-copy span {
+        font-size: 12px;
+    }
+}
