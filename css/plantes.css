@@ -123,47 +123,38 @@ h1{
     clip-path: inset(50%);
     white-space: nowrap;
 }
-.plant-figure { min-width: 0; margin: 0; color: #fff; text-align: center; }
-.plant-figure > img, .detail-panel {
+.plant-figure { 
+    min-width: 0; 
+    margin: 0; 
+    color: #fff; 
+    text-align: center; 
+}
+.plant-figure img {
     display: flex;
     width: 100%;
-    height: clamp(145px, 18vw, 220px);
+    height: 500px;
     align-items: center;
     justify-content: center;
 }
-.plant-figure > img { object-fit: cover; }
 .plant-figure figcaption {
     padding: 20px 4px 0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(14px, 1.6vw, 17px);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.3;
     text-shadow: 0 2px 5px #173d19;
 }
-.cycle-panel {
-    flex-direction: column;
-    gap: 12px;
-    padding: 10px;
-    background: #f7f7f7;
-    color: #6dbd47;
-}
-.cycle-panel strong {
-    width: 100%;
-    padding: 4px;
-    background: #91d65c;
-    color: #fff;
-    font-size: clamp(14px, 1.6vw, 19px);
-    text-transform: uppercase;
-}
-.cycle-panel span { color: #777; font-size: 14px; }
-.gps-panel { background: #d7d7d7; }
+
 .page-pager {
     display: flex;
     justify-content: space-between;
     margin-top: auto;
     padding: 12px 0 0;
 }
-.page-pager a { min-width: 122px; font-size: 17px; }
+.page-pager a { 
+    min-width: 122px; 
+    font-size: 17px; 
+}
 
 @media (max-width: 680px) {
     .plant-detail { min-height: 100vh; padding: 10px 16px 18px; }
